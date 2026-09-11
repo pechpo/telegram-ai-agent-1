@@ -409,7 +409,7 @@ class SessionManager:
             "stream-json",
             "--verbose",
             "--permission-mode",
-            "auto",
+            "dontAsk",
             "--allowedTools",
             self._mode_tools[mode],
             "--disallowedTools",
