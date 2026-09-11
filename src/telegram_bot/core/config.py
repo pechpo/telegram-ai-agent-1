@@ -43,6 +43,8 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
     telegram_bot_token: str
+    # aiohttp does not honor HTTP_PROXY unless trust_env is enabled.
+    telegram_proxy: str = ""
     allowed_user_ids: list[int] = []
     bot_lang: str = "en"
     # Directory where handlers download media before forwarding to CC.
